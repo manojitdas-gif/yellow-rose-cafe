@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yellow Rose Cafe — Chicago's Best Breakfast Diner | 5640 N Elston Ave</title>
+  <meta name="description" content="Yellow Rose Cafe in Chicago — a beloved neighborhood diner serving homemade corned beef hash, Tribune French Toast, and classic breakfast favorites since 1954. 4.7★ rated, cash only. 5640 N Elston Ave." />
+  <meta name="keywords" content="Yellow Rose Cafe, best breakfast Chicago, corned beef hash Chicago, local diner Chicago, family-owned restaurant Elston Ave, breakfast near me Chicago, Tribune French Toast, brunch Chicago" />
+  <meta name="author" content="Yellow Rose Cafe" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yellow Rose Cafe — Chicago's Best Breakfast Diner" />
+  <meta property="og:description" content="Homemade breakfast & lunch classics served with heart. 4.7★ rated, 555+ reviews. Cash only." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://yellowrosecafe.com" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌹</text></svg>" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema.org Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Yellow Rose Cafe",
+    "image": "images/hero.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5640 N Elston Ave",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "postalCode": "60646",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-773-631-2397",
+    "priceRange": "$10–$20",
+    "servesCuisine": "American",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "555"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "06:00",
+        "closes": "14:00"
+      }
+    ],
+    "paymentAccepted": "Cash",
+    "currenciesAccepted": "USD"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== CASH ONLY Banner ========== -->
+  <div class="top-banner" id="top-banner">
+    <span class="material-symbols-outlined">payments</span>
+    <span id="top-banner-text">Cash Only · Serving Chicago Since 1954</span>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo" id="nav-logo" data-page="home" onclick="navigateTo('home'); return false;">Yellow Rose Cafe</a>
+      <div class="navbar-links">
+        <a href="#" data-page="home" class="active" onclick="navigateTo('home'); return false;">Home</a>
+        <a href="#" data-page="menu" onclick="navigateTo('menu'); return false;">Menu</a>
+        <a href="#" data-page="gallery" onclick="navigateTo('gallery'); return false;">Gallery</a>
+        <a href="#" data-page="about" onclick="navigateTo('about'); return false;">About Us</a>
+        <a href="#" data-page="reviews" onclick="navigateTo('reviews'); return false;">Reviews</a>
+      </div>
+      <a href="#" class="navbar-cta navbar-cta-desktop" onclick="navigateTo('home'); scrollToContact(); return false;">Visit Us</a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a href="#" data-page="home" class="active" onclick="navigateTo('home'); closeMobileMenu(); return false;">Home</a>
+    <a href="#" data-page="menu" onclick="navigateTo('menu'); closeMobileMenu(); return false;">Menu</a>
+    <a href="#" data-page="gallery" onclick="navigateTo('gallery'); closeMobileMenu(); return false;">Gallery</a>
+    <a href="#" data-page="about" onclick="navigateTo('about'); closeMobileMenu(); return false;">About Us</a>
+    <a href="#" data-page="reviews" onclick="navigateTo('reviews'); closeMobileMenu(); return false;">Reviews</a>
+    <a href="#" class="navbar-cta" onclick="navigateTo('home'); scrollToContact(); closeMobileMenu(); return false;" style="margin-top: 16px;">Visit Us</a>
+  </div>
+
+  <!-- ================================================================
+       PAGE: HOME
+       ================================================================ -->
+  <div class="page active" id="page-home">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img id="hero-bg-img" src="images/hero.png" alt="Inside Yellow Rose Cafe - warm diner atmosphere" loading="eager" />
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="stars">
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star_half</span>
+          </div>
+          <span>4.7 · 555 Reviews</span>
+        </div>
+        <h1 class="hero-title" id="hero-title">
+          Chicago's Favorite <span class="highlight">Breakfast</span> Spot
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+          Homemade classics, friendly faces, and the best corned beef hash in the city.
+          Serving our neighborhood with love since 1954.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn-hero-primary" onclick="navigateTo('menu'); return false;">
+            <span class="material-symbols-outlined">restaurant_menu</span>
+            View Our Menu
+          </a>
+          <a href="#" class="btn-hero-secondary" onclick="navigateTo('about'); return false;">
+            <span class="material-symbols-outlined">info</span>
+            Our Story
+          </a>
+        </div>
+        <div class="hero-info">
+          <div class="hero-info-item">
+            <span class="material-symbols-outlined">schedule</span>
+            Open Daily 6am–2pm
+          </div>
+          <div class="hero-info-item">
+            <span class="material-symbols-outlined">location_on</span>
+            5640 N Elston Ave
+          </div>
+          <div class="hero-info-item">
+            <span class="material-symbols-outlined">call</span>
+            (773) 631-2397
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- Highlights Bar -->
+    <div class="highlights-bar">
+      <div class="container">
+        <div class="highlights-grid">
+          <div class="highlight-item reveal">
+            <div class="highlight-number" data-count="70">0</div>
+            <div class="highlight-label">Years Serving Chicago</div>
+          </div>
+          <div class="highlight-item reveal reveal-delay-1">
+            <div class="highlight-number" data-count="555">0</div>
+            <div class="highlight-label">5-Star Reviews</div>
+          </div>
+          <div class="highlight-item reveal reveal-delay-2">
+            <div class="highlight-number">4.7</div>
+            <div class="highlight-label">Average Rating</div>
+          </div>
+          <div class="highlight-item reveal reveal-delay-3">
+            <div class="highlight-number">$10-20</div>
+            <div class="highlight-label">Per Person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Dishes -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Our Signatures</div>
+          <h2 class="section-title font-display-lg">Crowd Favorites</h2>
+          <p class="section-subtitle">Handcrafted with love by Chef Angelo — these are the dishes our regulars keep coming back for.</p>
+        </div>
+        <div class="featured-grid">
+          <div class="featured-card reveal">
+            <div style="overflow:hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+              <img src="images/french-toast.png" alt="Tribune French Toast" class="featured-card-img" loading="lazy" />
+            </div>
+            <div class="featured-card-body">
+              <span class="featured-card-tag">Most Popular</span>
+              <h3 class="featured-card-title">Tribune French Toast</h3>
+              <p class="featured-card-desc">Thick-cut brioche dipped in our secret cinnamon batter, griddled to golden perfection and dusted with powdered sugar.</p>
+            </div>
+          </div>
+          <div class="featured-card reveal reveal-delay-1">
+            <div style="overflow:hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+              <img src="images/corned-beef-hash.png" alt="Homemade Corned Beef Hash" class="featured-card-img" loading="lazy" />
+            </div>
+            <div class="featured-card-body">
+              <span class="featured-card-tag">Featured on TV</span>
+              <h3 class="featured-card-title">Corned Beef Hash</h3>
+              <p class="featured-card-desc">Homemade from scratch daily — crispy, tender, and featured on Chicago's Best. Topped with two eggs your way.</p>
+            </div>
+          </div>
+          <div class="featured-card reveal reveal-delay-2">
+            <div style="overflow:hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+              <img src="images/pancakes.png" alt="Buttermilk Pancakes" class="featured-card-img" loading="lazy" />
+            </div>
+            <div class="featured-card-body">
+              <span class="featured-card-tag">Classic</span>
+              <h3 class="featured-card-title">Buttermilk Pancakes</h3>
+              <p class="featured-card-desc">Fluffy, golden stacks served with real butter and warm maple syrup. Add blueberries or chocolate chips for extra indulgence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Strip -->
+    <section style="background: var(--tertiary); padding: var(--space-3xl) 0;">
+      <div class="container" style="text-align: center;">
+        <div class="reveal" style="max-width: 700px; margin: 0 auto;">
+          <div style="display: flex; justify-content: center; gap: 4px; color: var(--primary-fixed-dim); margin-bottom: var(--space-md);">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <blockquote style="font-family: 'Domine', serif; font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 600; color: var(--primary-fixed); line-height: 1.4; margin-bottom: var(--space-lg);">
+            "Amazing service, amazing food, amazing people, and amazing prices!!"
+          </blockquote>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">— One of 555 happy customers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="text-align: center;">
+      <div class="container">
+        <div class="reveal" style="max-width: 600px; margin: 0 auto;">
+          <h2 class="font-display-lg" style="color: var(--on-surface); margin-bottom: var(--space-md);">Come Pull Up a Chair</h2>
+          <p class="font-body-lg" style="color: var(--on-surface-variant); margin-bottom: var(--space-xl);">
+            We're saving a spot for you. Join us for breakfast or lunch — no reservations needed, just bring an appetite (and cash!).
+          </p>
+          <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+            <a href="#" class="btn-hero-primary" onclick="navigateTo('menu'); return false;" style="background: var(--primary); color: var(--on-primary);">
+              <span class="material-symbols-outlined">restaurant_menu</span>
+              See Full Menu
+            </a>
+            <a href="tel:+17736312397" class="btn-hero-secondary" style="color: var(--primary); border-color: var(--primary);">
+              <span class="material-symbols-outlined">call</span>
+              Call (773) 631-2397
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom dynamic sections injected from CMS -->
+    <div id="custom-sections-container"></div>
+
+  </div>
+
+  <!-- ================================================================
+       PAGE: MENU
+       ================================================================ -->
+  <div class="page" id="page-menu">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">What We Serve</div>
+          <h2 class="section-title font-display-lg">Our Menu</h2>
+          <p class="section-subtitle">Homemade, old-school diner classics prepared fresh daily by Chef Angelo. Breakfast Combo starts at $6.99. Lunch Specials $10.49 with soup, fries & drink. Cash only.</p>
+        </div>
+
+        <!-- Menu Tabs -->
+        <div class="menu-tabs" id="menu-tabs">
+          <button class="menu-tab active" data-category="breakfast">Breakfast Specials</button>
+          <button class="menu-tab" data-category="lunch">Lunch Specials</button>
+          <button class="menu-tab" data-category="dinners">Hot Dinners</button>
+          <button class="menu-tab" data-category="drinks">Drinks</button>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="menu-grid" id="menu-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================================================================
+       PAGE: GALLERY
+       ================================================================ -->
+  <div class="page" id="page-gallery">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Sights & Stories</div>
+          <h2 class="section-title font-display-lg">Our Gallery</h2>
+          <p class="section-subtitle">A collection of moments and memories from the heart of Chicago. Share your visit with us.</p>
+        </div>
+
+        <!-- Gallery Filters -->
+        <div class="gallery-filters" id="gallery-filters">
+          <button class="gallery-filter-btn active" data-filter="all">All</button>
+          <button class="gallery-filter-btn" data-filter="food">Food & Drink</button>
+          <button class="gallery-filter-btn" data-filter="vibe">Vibe</button>
+          <button class="gallery-filter-btn" data-filter="people">Community</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-masonry" id="gallery-masonry">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Share Your Visit -->
+        <div class="upload-section reveal">
+          <div class="upload-grid">
+            <div class="upload-info">
+              <h2>Share Your Visit</h2>
+              <p>Did you snap a great photo of your meal or the diner? Have a story to tell? Upload your photos and leave feedback to be featured on our gallery.</p>
+              <ul class="upload-info-list">
+                <li>
+                  <span class="material-symbols-outlined">check_circle</span>
+                  High-quality food shots
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">check_circle</span>
+                  Moments with family & friends
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">check_circle</span>
+                  Your honest feedback
+                </li>
+              </ul>
+            </div>
+            <div class="upload-form">
+              <form id="gallery-upload-form" onsubmit="handleGalleryUpload(event)">
+                <div class="form-group">
+                  <label for="upload-name" class="form-label">Name</label>
+                  <input type="text" id="upload-name" class="form-input" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="upload-feedback" class="form-label">Your Experience</label>
+                  <textarea id="upload-feedback" class="form-textarea" placeholder="Tell us about your visit..." rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Upload Photo</label>
+                  <div class="file-upload-area" id="file-upload-area" onclick="document.getElementById('file-input').click()">
+                    <span class="material-symbols-outlined">add_a_photo</span>
+                    <div class="file-upload-text">Drag and drop or click to upload</div>
+                  </div>
+                  <input type="file" id="file-input" accept="image/*" multiple style="display:none" onchange="handleFileSelect(this)" />
+                  <div class="file-preview" id="file-preview"></div>
+                </div>
+                <button type="submit" class="btn-submit">Submit to Gallery</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================================================================
+       PAGE: ABOUT US
+       ================================================================ -->
+  <div class="page" id="page-about">
+    <section class="section about-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title font-display-lg" id="about-title">From Our Kitchen to Your Table</h2>
+          <p class="section-subtitle" id="about-subtitle">A Chicago institution for 70 years — where every guest is a neighbor.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-wrapper reveal">
+            <img id="about-image" src="images/owner.png" alt="Angelo, Owner and Chef of Yellow Rose Cafe" class="about-image" loading="lazy" />
+            <div class="about-image-accent"></div>
+          </div>
+          <div class="about-content reveal reveal-delay-1">
+            <h2 class="font-headline-lg" id="about-heading" style="color: var(--on-surface);">Meet Angelo</h2>
+            <div id="about-content-body">
+              <p class="font-body-lg" style="color: var(--on-surface-variant);">
+                At Yellow Rose Cafe, we believe the best meals are served with a side of conversation and a lot of heart.
+              </p>
+              <p style="color: var(--on-surface-variant); line-height: 1.7;">
+                What started as a dream to create a true neighborhood gathering spot has grown into a cornerstone of our Elston Avenue community. Our owner and chef, Angelo, has always operated with one simple philosophy: <strong>treat every guest like a neighbor, and every meal like a home-cooked Sunday feast.</strong>
+              </p>
+            </div>
+            <div class="about-quote" id="about-quote">
+              "Whether you're catching up with old friends, starting your workday, or stopping by for one of our signature daily specials, Angelo and our team are here to make sure you feel right at home."
+            </div>
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="about-stat-number" id="about-stat-year">1954</div>
+                <div class="about-stat-label">Established</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat-number" id="about-stat-rating">4.7★</div>
+                <div class="about-stat-label">Rating</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat-number" id="about-stat-count">555+</div>
+                <div class="about-stat-label">Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We're Known For -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">What Sets Us Apart</div>
+          <h2 class="section-title font-headline-lg">Why Chicago Loves Us</h2>
+        </div>
+        <div class="featured-grid">
+          <div class="featured-card reveal" style="text-align: center; padding: var(--space-xl);">
+            <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--primary-fixed); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
+              <span class="material-symbols-outlined" style="color: var(--on-primary-fixed); font-size: 28px;">restaurant</span>
+            </div>
+            <h3 class="featured-card-title">Homemade Every Day</h3>
+            <p class="featured-card-desc">Angelo prepares fresh turkey, ham, and all specials from scratch every single morning. No shortcuts, ever.</p>
+          </div>
+          <div class="featured-card reveal reveal-delay-1" style="text-align: center; padding: var(--space-xl);">
+            <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--primary-fixed); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
+              <span class="material-symbols-outlined" style="color: var(--on-primary-fixed); font-size: 28px;">favorite</span>
+            </div>
+            <h3 class="featured-card-title">Community First</h3>
+            <p class="featured-card-desc">Walk in a stranger, leave as a friend. Angelo treats every patron like a neighbor — that's the Yellow Rose way.</p>
+          </div>
+          <div class="featured-card reveal reveal-delay-2" style="text-align: center; padding: var(--space-xl);">
+            <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--primary-fixed); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
+              <span class="material-symbols-outlined" style="color: var(--on-primary-fixed); font-size: 28px;">tv</span>
+            </div>
+            <h3 class="featured-card-title">Featured on TV</h3>
+            <p class="featured-card-desc">Our legendary corned beef hash was showcased on Chicago's Best — and it's been a crowd favorite ever since.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================================================================
+       PAGE: REVIEWS
+       ================================================================ -->
+  <div class="page" id="page-reviews">
+    <section class="section reviews-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">What People Say</div>
+          <h2 class="section-title font-display-lg">Guest Reviews</h2>
+          <p class="section-subtitle">Don't take our word for it — hear what 555+ guests have to say about the Yellow Rose experience.</p>
+        </div>
+
+        <div class="reviews-layout">
+          <!-- Summary Sidebar -->
+          <div class="reviews-summary reveal">
+            <div class="reviews-rating-big">4.7</div>
+            <div class="reviews-stars">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star_half</span>
+            </div>
+            <div class="reviews-count">Based on 555 Google Reviews</div>
+
+            <!-- Rating Bars -->
+            <div class="rating-bars">
+              <div class="rating-bar-row">
+                <span class="rating-bar-label">5</span>
+                <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 78%"></div></div>
+                <span class="rating-bar-count">430</span>
+              </div>
+              <div class="rating-bar-row">
+                <span class="rating-bar-label">4</span>
+                <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 14%"></div></div>
+                <span class="rating-bar-count">77</span>
+              </div>
+              <div class="rating-bar-row">
+                <span class="rating-bar-label">3</span>
+                <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 5%"></div></div>
+                <span class="rating-bar-count">28</span>
+              </div>
+              <div class="rating-bar-row">
+                <span class="rating-bar-label">2</span>
+                <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 2%"></div></div>
+                <span class="rating-bar-count">11</span>
+              </div>
+              <div class="rating-bar-row">
+                <span class="rating-bar-label">1</span>
+                <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 1%"></div></div>
+                <span class="rating-bar-count">9</span>
+              </div>
+            </div>
+
+            <!-- Highlight Quotes -->
+            <div class="review-highlights">
+              <div class="review-highlight-quote">"Amazing service, amazing food, amazing people, and amazing prices!!"</div>
+              <div class="review-highlight-quote">"Friendly staff, fast service, reasonably priced meals."</div>
+            </div>
+
+            <button class="btn-leave-review" id="btn-write-review" onclick="openReviewModal()">
+              <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle; margin-right: 6px;">edit</span>
+              Write a Review
+            </button>
+          </div>
+
+          <!-- Review Cards -->
+          <div class="reviews-list" id="reviews-list">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================================================================
+       SHARED: CONTACT / MAP SECTION (visible on all pages)
+       ================================================================ -->
+  <section class="contact-section" id="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Find Us</h2>
+          <div class="contact-detail">
+            <span class="material-symbols-outlined">location_on</span>
+            <div class="contact-detail-text">
+              <h4>Address</h4>
+              <p>5640 N Elston Ave<br />Chicago, IL 60646, United States</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="material-symbols-outlined">schedule</span>
+            <div class="contact-detail-text">
+              <h4>Hours</h4>
+              <p>Monday – Sunday: 6:00 AM – 2:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="material-symbols-outlined">call</span>
+            <div class="contact-detail-text">
+              <h4>Phone</h4>
+              <p><a href="tel:+17736312397">+1 (773) 631-2397</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="material-symbols-outlined">payments</span>
+            <div class="contact-detail-text">
+              <h4>Payment</h4>
+              <p>Cash Only</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="material-symbols-outlined">dining</span>
+            <div class="contact-detail-text">
+              <h4>Services</h4>
+              <p>Dine-in · Takeaway · Delivery · Curbside Pickup</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2963.8!2d-87.756!3d41.983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU4JzU5LjAiTiA4N8KwNDUnMjAuMCJX!5e0!3m2!1sen!2sus!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Yellow Rose Cafe location on Google Maps">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Bar -->
+  <div class="newsletter-bar">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>Join Our Specials List</h3>
+          <p>Get notified about daily specials and exclusive offers.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Yellow Rose Cafe</div>
+          <p class="footer-brand-desc">A beloved Chicago neighborhood diner serving homemade breakfast and lunch classics since 1954. Pull up a chair — we've been saving a spot for you.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#" onclick="navigateTo('home'); return false;">Home</a>
+          <a href="#" onclick="navigateTo('menu'); return false;">Menu</a>
+          <a href="#" onclick="navigateTo('gallery'); return false;">Gallery</a>
+          <a href="#" onclick="navigateTo('about'); return false;">About Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#" onclick="navigateTo('reviews'); return false;">Read Reviews</a>
+          <a href="#" onclick="openReviewModal(); return false;">Write a Review</a>
+          <a href="tel:+17736312397">Call Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <a href="#">5640 N Elston Ave</a>
+          <a href="#">Chicago, IL 60646</a>
+          <a href="#">Open 6am–2pm Daily</a>
+          <a href="#" style="color: var(--primary-fixed-dim); font-weight: 600;">Cash Only</a>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>© 2024 Yellow Rose Cafe. All rights reserved. 5640 N Elston Ave, Chicago, IL 60646. · <a href="admin.html" style="color: var(--primary-fixed-dim); text-decoration: underline; font-weight: 500;">Admin Panel</a></p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=100057572974536" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/yellowrosecafe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://maps.google.com/?q=5640+N+Elston+Ave,+Chicago,+IL+60646" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WRITE REVIEW MODAL ========== -->
+  <div class="modal-backdrop" id="review-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Write a Review</h2>
+        <button class="modal-close" onclick="closeReviewModal()">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <form id="review-form" onsubmit="handleReviewSubmit(event)">
+        <div class="form-group">
+          <label for="review-name" class="form-label">Your Name</label>
+          <input type="text" id="review-name" class="form-input" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Rating</label>
+          <div class="star-rating-input" id="star-rating-input">
+            <button type="button" class="star-btn" data-rating="1" onclick="setRating(1)"><span class="material-symbols-outlined">star</span></button>
+            <button type="button" class="star-btn" data-rating="2" onclick="setRating(2)"><span class="material-symbols-outlined">star</span></button>
+            <button type="button" class="star-btn" data-rating="3" onclick="setRating(3)"><span class="material-symbols-outlined">star</span></button>
+            <button type="button" class="star-btn" data-rating="4" onclick="setRating(4)"><span class="material-symbols-outlined">star</span></button>
+            <button type="button" class="star-btn" data-rating="5" onclick="setRating(5)"><span class="material-symbols-outlined">star</span></button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="review-text" class="form-label">Your Review</label>
+          <textarea id="review-text" class="form-textarea" placeholder="Tell us about your experience..." rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Add Photo (Optional)</label>
+          <div class="file-upload-area" onclick="document.getElementById('review-photo-input').click()">
+            <span class="material-symbols-outlined">add_a_photo</span>
+            <div class="file-upload-text">Click to upload a photo</div>
+          </div>
+          <input type="file" id="review-photo-input" accept="image/*" style="display:none" onchange="handleReviewPhoto(this)" />
+          <div class="file-preview" id="review-photo-preview"></div>
+        </div>
+        <button type="submit" class="btn-submit">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">
+      <span class="material-symbols-outlined">chevron_left</span>
+    </button>
+    <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">
+      <span class="material-symbols-outlined">chevron_right</span>
+    </button>
+  </div>
+
+  <!-- ========== TOAST ========== -->
+  <div class="toast" id="toast">
+    <span class="material-symbols-outlined">check_circle</span>
+    <span id="toast-message">Success!</span>
+  </div>
+
+  <!-- ========== MOCK EMAIL CLIENT NOTIFICATION ========== -->
+  <div class="email-toast" id="email-toast">
+    <div class="email-toast-header">
+      <div class="email-toast-avatar">🌹</div>
+      <div class="email-toast-title-area">
+        <div class="email-toast-sender">Yellow Rose Cafe</div>
+        <div class="email-toast-meta">welcome@yellowrosecafe.com</div>
+      </div>
+      <button class="email-toast-close" onclick="closeEmailToast()">&times;</button>
+    </div>
+    <div class="email-toast-body">
+      <div style="font-size: 12px; color: #555; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 6px;">
+        <strong>Subject:</strong> Welcome to the Yellow Rose Cafe Family! 🌹
+      </div>
+      <p style="margin: 0 0 6px 0;"><strong>Welcome!</strong></p>
+      <p style="margin: 0 0 8px 0; font-size: 12px;">Thank you for subscribing to our Daily Specials list. You are now part of our inner circle on Elston Avenue!</p>
+      <div style="background: #f7f2fa; border-left: 3px solid var(--primary); padding: 8px; margin: 8px 0; border-radius: 4px;">
+        <h4 style="margin: 0 0 2px 0; color: var(--primary); font-size: 13px; font-weight: 700; letter-spacing: 0.5px;">WELCOME10</h4>
+        <p style="margin: 0; font-size: 11px; color: #555;">Show this code on your next visit to receive <strong>10% OFF</strong> or a <strong>FREE Coffee</strong>!</p>
+      </div>
+      <p style="margin: 0; font-size: 12px;">We prepare fresh turkey, ham, and our famous corned beef hash daily. See you soon!</p>
+      <p style="margin: 10px 0 0 0; font-size: 10px; color: #888; font-style: italic; border-top: 1px dashed #eee; padding-top: 6px;">Note: A real welcome email has been sent to your address!</p>
+    </div>
+  </div>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">
+    <span class="material-symbols-outlined">keyboard_arrow_up</span>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

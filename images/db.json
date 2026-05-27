@@ -1,0 +1,537 @@
+{
+    "menuData": {
+        "breakfast": [
+            {
+                "name": "Breakfast Combo",
+                "price": "8.90",
+                "desc": "2 eggs, 2 pancakes, and your choice of bacon, ham, or sausage. Available Monday–Friday, all day. The best deal in Chicago!",
+                "tags": [
+                    "best value",
+                    "mon–fri"
+                ],
+                "img": "images/breakfast-combo.png"
+            },
+            {
+                "name": "Chicago Breakfast",
+                "price": "$9.99",
+                "desc": "2 eggs, your choice of meat (ham, bacon, or sausage patty), 1 sausage link, crispy hash browns, and 1 fluffy pancake. A Chicago classic.",
+                "img": "images/chicago-breakfast.png",
+                "tags": [
+                    "popular"
+                ]
+            },
+            {
+                "name": "Special",
+                "price": "$10.99",
+                "desc": "2 eggs, 2 sausage links, golden hash browns, toast, and a hot cup of coffee. Everything you need to start the day right.",
+                "img": "images/eggs-breakfast.png",
+                "tags": [
+                    "includes coffee"
+                ]
+            },
+            {
+                "name": "Country Fried Steak & 2 Eggs",
+                "price": "$11.99",
+                "desc": "Crispy country fried steak smothered in creamy white gravy, served with 2 eggs any style, hash browns, and toast.",
+                "img": "images/country-fried-steak.png",
+                "tags": [
+                    "hearty"
+                ]
+            },
+            {
+                "name": "Tribune French Toast",
+                "price": "$12.99",
+                "desc": "Thick-cut brioche dipped in our secret cinnamon batter, griddled to golden perfection. Dusted with powdered sugar and served with fresh berries.",
+                "img": "images/french-toast.png",
+                "tags": [
+                    "popular"
+                ]
+            },
+            {
+                "name": "King of the Hill Omelette",
+                "price": "$13.99",
+                "desc": "The ultimate omelette — loaded with ham, bacon, sausage, onion, peppers, potatoes, and melted cheddar cheese. Not for the faint of heart!",
+                "img": "images/omelette.png",
+                "tags": [
+                    "popular"
+                ]
+            },
+            {
+                "name": "Triple Threat",
+                "price": "$14.00",
+                "desc": "2 eggs any style, 2 strips of bacon, 2 sausage links, crispy hash browns, and toast. Triple the meat, triple the satisfaction.",
+                "img": "images/breakfast-combo.png",
+                "tags": [
+                    "hearty"
+                ]
+            },
+            {
+                "name": "Corned Beef Hash & Eggs",
+                "price": "$14.99",
+                "desc": "Our legendary homemade corned beef hash — crispy outside, tender inside. Featured on Chicago's Best. Served with 2 eggs any style and toast.",
+                "img": "images/corned-beef-hash.png",
+                "tags": [
+                    "popular",
+                    "featured on tv"
+                ]
+            },
+            {
+                "name": "Buttermilk Pancakes",
+                "price": "$9.99",
+                "desc": "A tall stack of fluffy buttermilk pancakes served with real butter and warm maple syrup. The fluffiest in Chicago — add them to any breakfast!",
+                "img": "images/pancakes.png",
+                "tags": [
+                    "classic"
+                ]
+            }
+        ],
+        "lunch": [
+            {
+                "name": "Chicken Sandwich",
+                "price": "$10.49",
+                "desc": "Grilled chicken sandwich served with a cup of soup, golden fries, and a soft drink. A complete lunch at a great price.",
+                "img": "images/chicken-sandwich.png",
+                "tags": [
+                    "lunch special"
+                ]
+            },
+            {
+                "name": "Chicken Melt",
+                "price": "$10.49",
+                "desc": "Grilled chicken with avocado, crispy bacon, melted Swiss cheese, lettuce, and tomato on toasted multi-grain bread. Includes soup, fries, and a soft drink.",
+                "img": "images/chicken-melt.png",
+                "tags": [
+                    "lunch special"
+                ]
+            },
+            {
+                "name": "Small Julienne Salad",
+                "price": "$10.49",
+                "desc": "Fresh julienne salad with strips of turkey, ham, Swiss cheese, hard-boiled egg, tomato, and crisp lettuce. Includes soup, fries, and a soft drink.",
+                "img": "images/julienne-salad.png",
+                "tags": [
+                    "lunch special"
+                ]
+            },
+            {
+                "name": "Chicken Wrap",
+                "price": "$10.49",
+                "desc": "Grilled chicken, crispy bacon, cheddar cheese, lettuce, tomato, and ranch dressing wrapped in a flour tortilla. Includes soup, fries, and a soft drink.",
+                "img": "images/chicken-wrap.png",
+                "tags": [
+                    "lunch special"
+                ]
+            },
+            {
+                "name": "Corned Beef Sandwich",
+                "price": "$14.99",
+                "desc": "Piled high with our house-made corned beef on your choice of bread. The same legendary corned beef featured on Chicago's Best.",
+                "img": "images/corned-beef-hash.png",
+                "tags": [
+                    "popular"
+                ]
+            },
+            {
+                "name": "Jr. Club Sandwich",
+                "price": "$11.99",
+                "desc": "A classic club sandwich with turkey, bacon, lettuce, tomato, and mayo on toasted bread. Served with fries or coleslaw.",
+                "img": "images/chicken-sandwich.png",
+                "tags": []
+            }
+        ],
+        "dinners": [
+            {
+                "name": "Meatloaf Dinner",
+                "price": "Market Price",
+                "desc": "Homestyle meatloaf with rich brown gravy, served with creamy mashed potatoes and seasonal vegetables. Made fresh daily. Available Monday–Friday.",
+                "img": "images/meatloaf-dinner.png",
+                "tags": [
+                    "mon–fri",
+                    "homemade"
+                ]
+            },
+            {
+                "name": "Hot Turkey Dinner",
+                "price": "Market Price",
+                "desc": "Hand-carved fresh turkey breast (prepared daily by Angelo) with mashed potatoes, homemade gravy, and seasonal vegetables. Available Monday–Friday.",
+                "img": "images/meatloaf-dinner.png",
+                "tags": [
+                    "mon–fri",
+                    "made fresh daily"
+                ]
+            },
+            {
+                "name": "Chicken Breast Dinner",
+                "price": "Market Price",
+                "desc": "Golden-seared chicken breast served with creamy mashed potatoes, gravy, and steamed vegetables. A hearty comfort classic. Available Monday–Friday.",
+                "img": "images/chicken-wrap.png",
+                "tags": [
+                    "mon–fri"
+                ]
+            },
+            {
+                "name": "Pork Chops",
+                "price": "$14.99",
+                "desc": "Two tender grilled pork chops served with creamy mashed potatoes and sautéed green beans. Angelo's recipe, perfected over decades.",
+                "img": "images/pork-chops.png",
+                "tags": [
+                    "chef's pick"
+                ]
+            }
+        ],
+        "drinks": [
+            {
+                "name": "Bottomless Coffee",
+                "price": "$2.99",
+                "desc": "Hot, fresh-brewed coffee that never runs dry. The backbone of every great breakfast. Refills always free.",
+                "img": "images/coffee.png",
+                "tags": [
+                    "popular"
+                ]
+            },
+            {
+                "name": "Fresh Orange Juice",
+                "price": "$3.99",
+                "desc": "Freshly squeezed orange juice — bright, sweet, and the perfect way to start your morning.",
+                "img": "images/coffee.png",
+                "tags": []
+            },
+            {
+                "name": "Soft Drink",
+                "price": "$2.49",
+                "desc": "Choice of Coca-Cola, Diet Coke, Sprite, or other fountain beverages. Included free with all lunch specials.",
+                "img": "images/coffee.png",
+                "tags": []
+            },
+            {
+                "name": "Hot Chocolate",
+                "price": "$3.49",
+                "desc": "Rich, creamy hot chocolate topped with whipped cream. A cozy treat on cold Chicago mornings.",
+                "img": "images/coffee.png",
+                "tags": []
+            },
+            {
+                "name": "Iced Tea",
+                "price": "$2.49",
+                "desc": "Refreshing house-brewed iced tea. Sweetened or unsweetened, your choice.",
+                "img": "images/coffee.png",
+                "tags": []
+            },
+            {
+                "name": "Milkshake",
+                "price": "$5.99",
+                "desc": "Thick, old-fashioned milkshake in chocolate, vanilla, or strawberry. Made with real ice cream.",
+                "img": "images/coffee.png",
+                "tags": [
+                    "classic"
+                ]
+            },
+            {
+                "name": "Hot Tea",
+                "price": "$2.49",
+                "desc": "Selection of herbal and classic teas. Ask your server for available flavors.",
+                "img": "images/coffee.png",
+                "tags": []
+            }
+        ]
+    },
+    "galleryData": [
+        {
+            "src": "images/french-toast.png",
+            "caption": "Tribune French Toast",
+            "category": "food"
+        },
+        {
+            "src": "images/coffee.png",
+            "caption": "Morning Coffee",
+            "category": "food"
+        },
+        {
+            "src": "images/hero.png",
+            "caption": "The Dining Room",
+            "category": "vibe"
+        },
+        {
+            "src": "images/pancakes.png",
+            "caption": "Buttermilk Pancakes",
+            "category": "food"
+        },
+        {
+            "src": "images/corned-beef-hash.png",
+            "caption": "Famous Corned Beef Hash",
+            "category": "food"
+        },
+        {
+            "src": "images/pork-chops.png",
+            "caption": "Grilled Pork Chops",
+            "category": "food"
+        },
+        {
+            "src": "images/eggs-breakfast.png",
+            "caption": "Classic Breakfast",
+            "category": "food"
+        },
+        {
+            "src": "images/breakfast-combo.png",
+            "caption": "Breakfast Combo",
+            "category": "food"
+        },
+        {
+            "src": "images/chicken-sandwich.png",
+            "caption": "Chicken Sandwich Lunch Special",
+            "category": "food"
+        },
+        {
+            "src": "images/chicken-melt.png",
+            "caption": "Chicken Melt",
+            "category": "food"
+        },
+        {
+            "src": "images/country-fried-steak.png",
+            "caption": "Country Fried Steak & Eggs",
+            "category": "food"
+        },
+        {
+            "src": "images/omelette.png",
+            "caption": "King of the Hill Omelette",
+            "category": "food"
+        },
+        {
+            "src": "images/meatloaf-dinner.png",
+            "caption": "Homestyle Meatloaf Dinner",
+            "category": "food"
+        },
+        {
+            "src": "images/chicken-wrap.png",
+            "caption": "Chicken Wrap",
+            "category": "food"
+        },
+        {
+            "src": "images/julienne-salad.png",
+            "caption": "Julienne Salad",
+            "category": "food"
+        },
+        {
+            "src": "images/chicago-breakfast.png",
+            "caption": "The Chicago Breakfast",
+            "category": "food"
+        }
+    ],
+    "reviewsData": [
+        {
+            "id": "rev_default_1",
+            "name": "Steven Piotrowski",
+            "initials": "SP",
+            "rating": 5,
+            "date": "3 months ago",
+            "text": "My favorite spot in Chicago to grab breakfast with friendly and familiar faces. Angelo, the owner and operator, treats patrons like neighbors and is always accommodating. The prices are very reasonable and the homemade quality and effort shows in every dish. Can't recommend this place enough!",
+            "badge": "Local Guide",
+            "bg": "bg-1",
+            "response": "Thank you, Steven. This review made our day."
+        },
+        {
+            "id": "rev_default_2",
+            "name": "Dude Knows",
+            "initials": "DK",
+            "rating": 5,
+            "date": "7 months ago",
+            "text": "**CASH ONLY** Classic breakfast joint known for their corned beef. They were featured on Chicago's Best for this. The corned beef was very tasty and the jelly for the toast was great. Very friendly and speedy service. Highly recommend for breakfast lovers.",
+            "badge": "Local Guide",
+            "bg": "bg-2",
+            "response": "Thank you so much for the kind words. I am new at this, hope to see you again. I really appreciate your review."
+        },
+        {
+            "id": "rev_default_3",
+            "name": "Richard Friedman",
+            "initials": "RF",
+            "rating": 5,
+            "date": "3 months ago",
+            "text": "Yellow Rose is a civic treasure. The owner/chef Angelo is a culinary genius. Every day he makes fresh turkey and ham. His pork chops, hot beef and corned beef hash are incredible. If you're eating breakfast you must add pancakes to your order — they are the fluffiest in Chicago!",
+            "badge": "Local Guide",
+            "bg": "bg-3",
+            "response": "Thank you, Richard for the nice comments. I really appreciate it."
+        },
+        {
+            "id": "rev_default_4",
+            "name": "Michael K.",
+            "initials": "MK",
+            "rating": 5,
+            "date": "2 weeks ago",
+            "text": "A true Chicago classic. The Tribune French Toast is unbelievable, but honestly, it's the atmosphere that keeps me coming back. It feels like stepping into a warmer, friendlier era without feeling forced. Cash only, so hit the ATM first!",
+            "badge": "Local Guide",
+            "bg": "bg-1",
+            "response": null
+        },
+        {
+            "id": "rev_default_5",
+            "name": "Sarah L.",
+            "initials": "SL",
+            "rating": 4.5,
+            "date": "1 month ago",
+            "text": "The corned beef hash is made in-house and you can taste the difference. Great service, very attentive even when it was packed on a Sunday morning. Love the wooden booths and old-school vibe. Will definitely be back!",
+            "badge": null,
+            "bg": "bg-2",
+            "response": null
+        }
+    ],
+    "pendingReviews": [],
+    "pendingGallery": [],
+    "siteSettings": {
+        "logoText": "Yellow Rose Cafe",
+        "phone": "(773) 631-2397",
+        "address": "5640 N Elston Ave, Chicago, IL 60646",
+        "hours": "Monday – Sunday: 6:00 AM – 2:00 PM",
+        "payment": "Cash Only",
+        "heroTitle": "Chicago's Favorite Breakfast Spot",
+        "heroSubtitle": "Homemade classics, friendly faces, and the best corned beef hash in the city. Serving our neighborhood with love since 1954.",
+        "heroBg": "images/hero.png",
+        "aboutTitle": "From Our Kitchen to Your Table",
+        "aboutSubtitle": "A Chicago institution for 70 years — where every guest is a neighbor.",
+        "aboutHeading": "Meet Angelo",
+        "aboutContent": "At Yellow Rose Cafe, we believe the best meals are served with a side of conversation and a lot of heart.\n\nWhat started as a dream to create a true neighborhood gathering spot has grown into a cornerstone of our Elston Avenue community. Our owner and chef, Angelo, has always operated with one simple philosophy: treat every guest like a neighbor, and every meal like a home-cooked Sunday feast.",
+        "aboutQuote": "Whether you're catching up with old friends, starting your workday, or stopping by for one of our signature daily specials, Angelo and our team are here to make sure you feel right at home.",
+        "aboutImage": "images/owner.png",
+        "aboutStatYear": "1954",
+        "aboutStatRating": "4.7★",
+        "aboutStatCount": "555+"
+    },
+    "promotions": {
+        "topBannerActive": true,
+        "topBannerText": "Cash Only · Serving Chicago Since 1954"
+    },
+    "customSections": [],
+    "subscribers": [
+        {
+            "email": "manojeetdasdas@gmail.com",
+            "date": "2026-05-27 21:17:12",
+            "status": "Active"
+        }
+    ],
+    "emailLogs": [
+        {
+            "id": "d8c15219",
+            "email": "manojeetdasdas@gmail.com",
+            "subject": "Welcome to the Yellow Rose Cafe Family! 🌹",
+            "date": "2026-05-27 21:17:12",
+            "status": "Logged (SMTP Config Missing)",
+            "details": "Welcome mail sent."
+        }
+    ],
+    "smtpSettings": {
+        "host": "",
+        "port": 587,
+        "username": "",
+        "password": "",
+        "fromEmail": "",
+        "useTls": true
+    },
+    "analytics": {
+        "totalVisits": 1458,
+        "interactions": 388,
+        "pageViews": {
+            "home": 867,
+            "menu": 427,
+            "gallery": 182,
+            "about": 118,
+            "reviews": 164
+        },
+        "clicks": {
+            "call": 50,
+            "directions": 92,
+            "subscribe": 26,
+            "review_submit": 12
+        }
+    },
+    "activityLogs": [
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Home page",
+            "time": "2026-05-27 21:58:50",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Reviews page",
+            "time": "2026-05-27 21:58:48",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed About page",
+            "time": "2026-05-27 21:58:35",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Gallery page",
+            "time": "2026-05-27 21:58:31",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Menu page",
+            "time": "2026-05-27 21:58:23",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Home page",
+            "time": "2026-05-27 21:57:24",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Home page",
+            "time": "2026-05-27 21:51:40",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Reviews page",
+            "time": "2026-05-27 21:50:09",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed About page",
+            "time": "2026-05-27 21:50:02",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Gallery page",
+            "time": "2026-05-27 21:49:51",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Menu page",
+            "time": "2026-05-27 21:49:37",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Home page",
+            "time": "2026-05-27 21:49:29",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Menu page",
+            "time": "2026-05-27 21:44:00",
+            "interactive": false
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client clicked 'Call Cafe' phone link",
+            "time": "2026-05-27 21:44:00",
+            "interactive": true
+        },
+        {
+            "ip": "127.0.0.1",
+            "text": "Visitor from Local Client viewed Home page",
+            "time": "2026-05-27 21:44:00",
+            "interactive": false
+        }
+    ]
+}

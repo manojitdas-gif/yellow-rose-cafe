@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yellow Rose Cafe - Gallery &amp; Reviews</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#f6be3b",
+                        "on-background": "#1b1c15",
+                        "on-tertiary-fixed-variant": "#574335",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f5f4e8",
+                        "on-primary-container": "#553d00",
+                        "surface-container-highest": "#e4e3d7",
+                        "tertiary-fixed-dim": "#dec1af",
+                        "tertiary-container": "#c4a897",
+                        "surface-container": "#efeee3",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1b1c15",
+                        "surface-container-high": "#e9e9dd",
+                        "inverse-primary": "#f6be3b",
+                        "on-surface-variant": "#4f4634",
+                        "primary-fixed": "#ffdea0",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dbdbcf",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#cac99f",
+                        "background": "#fbfaee",
+                        "inverse-surface": "#303129",
+                        "primary-container": "#daa520",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#484828",
+                        "surface-variant": "#e4e3d7",
+                        "secondary": "#60603e",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#e6e5b9",
+                        "surface-bright": "#fbfaee",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1d1d03",
+                        "tertiary": "#705a4c",
+                        "on-primary-fixed-variant": "#5c4300",
+                        "tertiary-fixed": "#fbddca",
+                        "outline-variant": "#d3c5ae",
+                        "surface": "#fbfaee",
+                        "inverse-on-surface": "#f2f1e5",
+                        "on-primary-fixed": "#261900",
+                        "primary": "#795900",
+                        "on-tertiary-container": "#513d30",
+                        "surface-tint": "#795900",
+                        "on-secondary-container": "#666643",
+                        "secondary-container": "#e6e5b9",
+                        "on-tertiary-fixed": "#28180d",
+                        "outline": "#817662"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "xs": "4px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans", "sans-serif"],
+                        "label-bold": ["Work Sans", "sans-serif"],
+                        "headline-md": ["Domine", "serif"],
+                        "display-lg-mobile": ["Domine", "serif"],
+                        "headline-lg": ["Domine", "serif"],
+                        "display-lg": ["Domine", "serif"],
+                        "body-lg": ["Work Sans", "sans-serif"],
+                        "caption": ["Work Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- CASH ONLY Banner -->
+<div class="bg-primary-container text-on-primary-container flex justify-center items-center py-2 w-full z-[60] flat no shadows top-0 full-width">
+<span class="material-symbols-outlined mr-2">payments</span>
+<span class="text-label-bold font-label-bold tracking-widest uppercase">CASH ONLY - SINCE 1954</span>
+</div>
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 shadow-sm bg-background w-full">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-md max-w-7xl mx-auto">
+<div class="text-headline-md font-headline-md text-primary tracking-tight">Yellow Rose Cafe</div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Menu</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Our Story</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-200" href="#">Gallery</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#reviews">Reviews</a>
+</nav>
+<button class="hidden md:block bg-tertiary text-primary-fixed px-6 py-2 rounded font-label-bold text-label-bold hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-colors shadow-sm scale-95 duration-150 uppercase">Visit Us</button>
+<!-- Mobile Menu Toggle (Visual Only) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xl flex flex-col gap-xl">
+<!-- Page Header -->
+<section class="text-center max-w-2xl mx-auto space-y-4">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary">Sights &amp; Stories</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">A collection of moments and memories from the heart of Chicago. Share your visit with us.</p>
+</section>
+<!-- Gallery Section (Masonry-style Grid) -->
+<section aria-labelledby="gallery-heading">
+<h2 class="sr-only" id="gallery-heading">Photo Gallery</h2>
+<div class="columns-1 sm:columns-2 lg:columns-3 gap-gutter space-y-gutter">
+<!-- Image 4: French Toast -->
+<div class="break-inside-avoid relative group rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 bg-surface-container">
+<img alt="Tribune French Toast at Yellow Rose Cafe" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaV9Cu_TlGBJ5eadzq95iAxF1ljq4JvUtx8TP8aLqnItPbmyIdvf-JcVQXQG49rFk3c-O4YO2_jGfYMOmrNojanBjr_1VufZR-1PDlXYvdgvjsg50nulaJwKwAFodGX2KNV7yjHj0oIQT20jYnrEts5ouB5tYAzfiklhvlVk79IBHntN61scu2ZVZWRxWiuvJFra_hj6C3o7N8v7pH_loV76ZQeH6g0Zhrjv1IUnC84kWh33wqaaX4gRfRmGFLli-DATrTLzJoRBUu"/>
+<div class="absolute inset-0 bg-on-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+<p class="text-on-primary font-label-bold text-label-bold uppercase tracking-wider">Tribune French Toast</p>
+</div>
+</div>
+<!-- Generated Image 1: Coffee Pour -->
+<div class="break-inside-avoid relative group rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 bg-surface-container">
+<img alt="Pouring coffee" class="w-full h-auto object-cover" data-alt="A close-up shot of a steaming cup of black coffee being poured from a vintage stainless steel diner carafe into a thick, cream-colored ceramic mug. The scene is set on a dark walnut table top with subtle scratches, illuminated by warm, inviting morning light filtering through a window. The aesthetic is corporate-modern meets refined heritage, emphasizing high-contrast tones and tactile textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBefkYaY4nqxAWvvyZljxqeTX1rpqz7iFmBOzLS3m-TGAviv55ENAyLf4clyQ-wNlsO7MOw_ZznfL472sNy1VtylZKPMzgyvf8QoE04eJjOC-JVG-55dMl0f-fjFRrnqCVsbTuhkOmr0zEDVnL3hD19R6LDUJbtYYScppw5rQPaOuUmvGGZDnJ4suuB2_5ZshlFZk4b2w8nT1LVxFklzq-jv7bnUpuMKmdbnN41h6Oi6OyzjuA1ILi4ppq61k4CMixfFrT_212x-5KS"/>
+</div>
+<!-- Image 6: Cafe Interior -->
+<div class="break-inside-avoid relative group rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 bg-surface-container">
+<img alt="Yellow Rose Cafe Interior" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLAQqgmqxwHU7SQNraz7OGSPIRutXlvS3TvZYAPEGk5xyBGg0ihnrdSVabwHm8IkE5CeeUOq9M8H-SS8mSbH4o5qAIjWo77sNa-h8TTjTq_iBtU52ONJlduIdORwCDbnQRYkqFqv9K1j-SZDUwd0L01GnnlOUiFH_VDGjbPHiEzzcHOmWQ346SGYqG1srS_HdjhayGSHw9OhW2Q4fvovCZLxugeovMFkQPwdudAXMrTGEExkjsbAxFsCMBiC_lCpGdKOBDEqcAhrGA"/>
+<div class="absolute inset-0 bg-on-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+<p class="text-on-primary font-label-bold text-label-bold uppercase tracking-wider">The Dining Room</p>
+</div>
+</div>
+<!-- Generated Image 2: Pancakes -->
+<div class="break-inside-avoid relative group rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 bg-surface-container">
+<img alt="Pancakes" class="w-full h-auto object-cover" data-alt="A towering stack of three fluffy buttermilk pancakes served on a classic diner plate. The pancakes are topped with a square of melting butter and a generous pour of dark amber maple syrup cascading down the sides. Shot from a slightly elevated angle on a wooden surface with a soft, diffused shadow beneath the plate, highlighting the tactile, mouth-watering quality of the food." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWXITof0ASY4Y79bbzVglZIWEAuRchthHjmCMdht80-TI7s0t7VnUfZt6GReXGdNcklS_nf6eFDWJgxzIjpiPSdctFIr0Fz1wIpVgGNtUmvJykZ6z_ILs2gx8nvqJ94sw6oZaEyKUzYWQceIy81O9Uk3KxuzWLr-9issflWdZSEETXZHiJ0RVZs1CbVmH9EAjJZQLtPqqqpVlPbNVkGwsER2YSe5OlY_SBdWIP-QjY-pXIOJSY4IsoVQlljc0Eg606moRVGXWfyzgj"/>
+</div>
+<!-- Image 5: Corned Beef Hash -->
+<div class="break-inside-avoid relative group rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 bg-surface-container">
+<img alt="Corned Beef Hash" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5OOisKBBOhIFhSpu6-KXpnP4z_jBCTDgRe3Sn4-BQe-sQqLR9W_wUKyNQtx2jeFkx33c-goNPBYg6WqWI6dqkrNqHV_VbjyycETlEf9z4XZE96nrKtP4x-d5IVBnQ_Vfwm97MgicARf99l8e6vhRqu5tzr5KD10GrPw3CWAL4DV5JPFAbfuYW1anpTWZv2VuHVCNWW6X6tPuZG1BimCpmEuJmvgLdjZDIfWXBqpSXQHqbSJ4PRpY6DWadmWj6Fgj6V5rr-HR4e-RV"/>
+<div class="absolute inset-0 bg-on-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+<p class="text-on-primary font-label-bold text-label-bold uppercase tracking-wider">Classic Hash</p>
+</div>
+</div>
+<!-- Generated Image 3: Pie slice -->
+<div class="break-inside-avoid relative group rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 bg-surface-container">
+<img alt="Cherry Pie" class="w-full h-auto object-cover" data-alt="A slice of rustic cherry pie on a small ivory-colored dessert plate. The crust is golden and flaky, and bright red cherry filling oozes slightly onto the plate. Next to the plate is a simple, polished silver fork. The lighting is moody and warm, creating a soft shadow that emphasizes the depth and homemade quality of the dessert, fitting the refined heritage diner aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRrNOSE1QDfVy5wFQcxl0x6caupHkfGlePJfxR7ZW04YknIXM81Ca5pyeezbyZBGVymeYYS6aDLWBfC9svYgUnXCOT_VrFhWcwkWQfVugWtRvLKrRXBI7aCOAgMHuOS-ZJ7TsRsl-sIgHqUqKhZLVo5K70Tr7VWa-WWNByilOOnpZhJ6q5GRBHv8k4xtm9sMz9C1wnrEyf3j1_aKTSwLZ2Z9MJaOElPBUtwoITGEYav4zQ2oRfn3EKvbdw_PDHd6JE5n2n8MQCL4a6"/>
+</div>
+</div>
+</section>
+<hr class="border-outline-variant opacity-50 my-lg"/>
+<!-- Reviews & Testimonials Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start" id="reviews">
+<!-- Ratings Summary Col -->
+<div class="lg:col-span-4 bg-surface-container-low p-md rounded-lg shadow-sm border border-outline-variant/30 sticky top-32">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-sm">Guest Reviews</h2>
+<div class="flex items-center gap-sm mb-4">
+<span class="text-display-lg font-display-lg text-primary">4.7</span>
+<div class="flex flex-col">
+<div class="flex text-primary-fixed-dim">
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[20px]">star_half</span>
+</div>
+<span class="text-caption font-caption text-on-surface-variant">Based on 342 Google Reviews</span>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-md">Hear what our regulars and first-time visitors have to say about the Yellow Rose experience.</p>
+<button class="w-full bg-secondary text-on-secondary py-2 px-4 rounded font-label-bold text-label-bold hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors border border-transparent">
+                    Leave a Google Review
+                </button>
+</div>
+<!-- Review Cards Col -->
+<div class="lg:col-span-8 flex flex-col gap-md">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-surface-variant relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 bg-tertiary text-on-tertiary px-3 py-1 rounded-bl-lg font-caption text-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> Local Guide
+                    </div>
+<div class="flex items-center gap-sm mb-3 mt-2">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-bold text-label-bold">
+                            MK
+                        </div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Michael K.</h3>
+<div class="flex text-primary-fixed-dim text-[14px]">
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+</div>
+</div>
+<span class="ml-auto text-caption font-caption text-outline">2 weeks ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">"A true Chicago classic. The Tribune French Toast is unbelievable, but honestly, it's the atmosphere that keeps me coming back. It feels like stepping into a warmer, friendlier era without feeling forced. Cash only, so hit the ATM first!"</p>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-surface-variant relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-sm mb-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-bold text-label-bold">
+                            SL
+                        </div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Sarah L.</h3>
+<div class="flex text-primary-fixed-dim text-[14px]">
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star_half</span>
+</div>
+</div>
+<span class="ml-auto text-caption font-caption text-outline">1 month ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">"The corned beef hash is made in-house and you can taste the difference. Great service, very attentive even when it was packed on a Sunday morning. Love the wooden booths and old-school vibe."</p>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-surface-variant relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 bg-tertiary text-on-tertiary px-3 py-1 rounded-bl-lg font-caption text-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> Local Guide
+                    </div>
+<div class="flex items-center gap-sm mb-3 mt-2">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-bold text-label-bold">
+                            DJ
+                        </div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">David J.</h3>
+<div class="flex text-primary-fixed-dim text-[14px]">
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+</div>
+<span class="ml-auto text-caption font-caption text-outline">3 months ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">"Solid spot for breakfast. Coffee is hot and endless. The wait can be a bit long on weekends, but it's worth it. Real diner food done right."</p>
+</div>
+<button class="self-center mt-sm text-primary font-label-bold text-label-bold flex items-center gap-1 hover:underline">
+                    Read more reviews <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Share Your Visit Portal -->
+<section class="bg-tertiary text-on-tertiary rounded-xl p-lg md:p-xl shadow-md mt-lg relative overflow-hidden">
+<!-- Subtle Texture/Pattern overlay -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="space-y-md">
+<h2 class="text-headline-lg font-headline-lg text-primary-fixed">Share Your Visit</h2>
+<p class="text-body-lg font-body-lg opacity-90">Did you snap a great photo of your meal or the diner? Have a story to tell? Upload your photos and leave feedback to be featured on our gallery.</p>
+<ul class="space-y-2 font-body-md text-body-md opacity-80 list-none">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">check_circle</span> High-quality food shots</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">check_circle</span> Moments with family &amp; friends</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">check_circle</span> Your honest feedback</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest text-on-surface p-md rounded-lg shadow-sm">
+<form class="space-y-4">
+<div>
+<label class="block text-label-bold font-label-bold text-on-surface-variant mb-1" for="guest-name">Name</label>
+<input class="w-full border-0 border-b-2 border-outline-variant bg-transparent focus:ring-0 focus:border-primary px-0 py-2 text-body-md font-body-md placeholder:text-outline" id="guest-name" placeholder="Jane Doe" type="text"/>
+</div>
+<div>
+<label class="block text-label-bold font-label-bold text-on-surface-variant mb-1" for="guest-feedback">Your Experience</label>
+<textarea class="w-full border-0 border-b-2 border-outline-variant bg-transparent focus:ring-0 focus:border-primary px-0 py-2 text-body-md font-body-md placeholder:text-outline resize-none" id="guest-feedback" placeholder="Tell us about your visit..." rows="3"></textarea>
+</div>
+<div class="pt-2">
+<label class="block text-label-bold font-label-bold text-on-surface-variant mb-2">Upload Photo</label>
+<div class="border-2 border-dashed border-outline-variant rounded p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-2 text-[32px]">add_a_photo</span>
+<span class="text-caption font-caption text-on-surface-variant">Drag and drop or click to upload</span>
+</div>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary py-3 rounded font-label-bold text-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors uppercase tracking-wider shadow-sm" type="button">
+                            Submit to Gallery
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-inverse-surface grid grid-cols-1 md:grid-cols-3 gap-lg px-margin-desktop py-xl w-full flat mt-auto">
+<div>
+<div class="text-headline-md font-headline-md text-primary-fixed mb-4">Yellow Rose Cafe</div>
+<p class="text-caption font-caption text-surface-variant">© 2024 Yellow Rose Cafe. 5640 N Elston Ave, Chicago, IL.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="text-label-bold font-label-bold text-primary-fixed-dim uppercase mb-2">Explore</h4>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors text-body-md font-body-md" href="#">Menu</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors text-body-md font-body-md" href="#">Our Story</a>
+<a class="text-primary-fixed underline hover:text-primary-fixed-dim transition-colors text-body-md font-body-md" href="#">Gallery</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="text-label-bold font-label-bold text-primary-fixed-dim uppercase mb-2">Connect</h4>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors text-body-md font-body-md" href="#">Join Specials List</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors text-body-md font-body-md" href="#reviews">Read Reviews</a>
+</div>
+</footer>
+</body></html>

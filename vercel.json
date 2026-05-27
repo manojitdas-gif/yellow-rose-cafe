@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://yellow-rose-backend.onrender.com/api/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "destination": "https://yellow-rose-backend.onrender.com/images/:path*"
+    }
+  ]
+}
