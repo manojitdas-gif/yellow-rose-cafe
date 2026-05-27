@@ -4,3 +4,8 @@ services:
     runtime: python
     buildCommand: echo "No build step required"
     startCommand: python server.py
+    envVars:
+      - key: FIREBASE_URL
+        value: https://yellow-rose-cafe-default-rtdb.firebaseio.com/db.json
+      - key: IMGBB_API_KEY
+        value: d96addbeef2a376955b189349eb18510
