@@ -5,6 +5,9 @@ import os
 import re
 import uuid
 import smtplib
+import urllib.request
+import urllib.parse
+import base64
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
@@ -12,6 +15,9 @@ from datetime import datetime
 PORT = 8080
 DB_FILE = 'images/db.json'
 UPLOAD_DIR = 'images'
+
+FIREBASE_URL = os.environ.get('FIREBASE_URL')
+IMGBB_API_KEY = os.environ.get('IMGBB_API_KEY')
 
 # Ensure upload directory exists
 if not os.path.exists(UPLOAD_DIR):
@@ -344,6 +350,24 @@ DEFAULT_DB = {
 }
 
 def load_db():
+    if FIREBASE_URL:
+        try:
+            req = urllib.request.Request(
+                FIREBASE_URL,
+                headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'}
+            )
+            with urllib.request.urlopen(req, timeout=10) as response:
+                content = response.read().decode('utf-8')
+                data = json.loads(content)
+                if data is None:
+                    # If Firebase returns null, initialize it with DEFAULT_DB
+                    save_db(DEFAULT_DB)
+                    return DEFAULT_DB
+                return data
+        except Exception as e:
+            print(f"Error loading DB from Firebase: {e}. Falling back to default.")
+            return DEFAULT_DB
+
     if not os.path.exists(DB_FILE):
         # Fallback to local root db.json if it exists (useful for first-time migration)
         if os.path.exists('db.json'):
@@ -364,6 +388,21 @@ def load_db():
         return DEFAULT_DB
 
 def save_db(data):
+    if FIREBASE_URL:
+        try:
+            req = urllib.request.Request(
+                FIREBASE_URL,
+                data=json.dumps(data).encode('utf-8'),
+                headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'},
+                method='PUT'
+            )
+            with urllib.request.urlopen(req, timeout=10) as response:
+                response.read()
+            return
+        except Exception as e:
+            print(f"Error saving DB to Firebase: {e}")
+            return
+
     with open(DB_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
@@ -741,6 +780,41 @@ class CMSHandler(http.server.SimpleHTTPRequestHandler):
                 if ext not in ['.png', '.jpg', '.jpeg', '.gif', '.webp']:
                     self.send_error_response(400, "Invalid file type. Supported: png, jpg, jpeg, gif, webp")
                     return
+
+                # If ImgBB API key is provided, upload directly to the cloud for free permanent storage
+                if IMGBB_API_KEY:
+                    try:
+                        base64_image = base64.b64encode(part_body).decode('utf-8')
+                        payload = {
+                            "image": base64_image
+                        }
+                        api_url = f"https://api.imgbb.com/1/upload?key={IMGBB_API_KEY}"
+                        data = urllib.parse.urlencode(payload).encode('utf-8')
+                        
+                        req = urllib.request.Request(
+                            api_url,
+                            data=data,
+                            headers={
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                                'User-Agent': 'Mozilla/5.0'
+                            }
+                        )
+                        with urllib.request.urlopen(req, timeout=30) as response:
+                            res = json.loads(response.read().decode('utf-8'))
+                            if res.get('success'):
+                                img_url = res['data']['url']
+                                self.send_response(200)
+                                self.send_header('Content-Type', 'application/json')
+                                self.end_headers()
+                                self.wfile.write(json.dumps({
+                                    "status": "success",
+                                    "url": img_url
+                                }).encode('utf-8'))
+                                return
+                            else:
+                                print(f"ImgBB upload error response: {res}")
+                    except Exception as upload_err:
+                        print(f"Failed to upload to ImgBB: {upload_err}. Falling back to local storage.")
 
                 new_filename = f"uploaded_{uuid.uuid4().hex}{ext}"
                 file_path = os.path.join(UPLOAD_DIR, new_filename)
