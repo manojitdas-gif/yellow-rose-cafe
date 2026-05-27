@@ -35,18 +35,39 @@ function checkAuth() {
   }
 }
 
-function handleLogin(e) {
+async function handleLogin(e) {
   e.preventDefault();
   const user = document.getElementById("username").value.trim();
   const pass = document.getElementById("password").value.trim();
 
-  if (user === "admin" && pass === "admin") {
-    sessionStorage.setItem("adminLoggedIn", "true");
-    checkAuth();
-    initDashboard();
-    showToast("Welcome back, Administrator! 🌹");
-  } else {
-    showToast("Invalid credentials. Try admin / admin");
+  try {
+    const res = await fetch('/api/admin/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username: user, password: pass })
+    });
+    const result = await res.json();
+    if (res.ok && result.status === "success") {
+      sessionStorage.setItem("adminLoggedIn", "true");
+      checkAuth();
+      initDashboard();
+      showToast("Welcome back, Administrator! 🌹");
+    } else {
+      showToast(result.message || "Invalid administrator credentials.");
+    }
+  } catch (err) {
+    console.error("Login request failed:", err);
+    // Fallback to local offline check for debugging stability
+    if (user === "admin" && pass === "admin") {
+      sessionStorage.setItem("adminLoggedIn", "true");
+      checkAuth();
+      initDashboard();
+      showToast("Access granted (offline fallback) 🌹");
+    } else {
+      showToast("Login connection error!");
+    }
   }
 }
 
@@ -1269,5 +1290,38 @@ function showToast(message) {
     msgEl.textContent = message;
     toast.classList.add("show");
     setTimeout(() => toast.classList.remove("show"), 3500);
+  }
+}
+
+async function handleChangeCredentials(e) {
+  e.preventDefault();
+  const newUser = document.getElementById("new-admin-username").value.trim();
+  const newPass = document.getElementById("new-admin-password").value.trim();
+  const confirmPass = document.getElementById("confirm-admin-password").value.trim();
+
+  if (newPass !== confirmPass) {
+    showToast("Passwords do not match!");
+    return;
+  }
+
+  try {
+    const res = await fetch('/api/admin/change-credentials', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username: newUser, password: newPass })
+    });
+    const result = await res.json();
+    if (res.ok && result.status === "success") {
+      showToast("Login credentials updated successfully! 🔐");
+      document.getElementById("admin-credentials-form").reset();
+      loadDb();
+    } else {
+      showToast(result.message || "Failed to update credentials.");
+    }
+  } catch (err) {
+    console.error("Failed to change credentials:", err);
+    showToast("Error updating login credentials.");
   }
 }

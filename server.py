@@ -318,6 +318,10 @@ DEFAULT_DB = {
         "topBannerActive": True,
         "topBannerText": "Cash Only · Serving Chicago Since 1954"
     },
+    "adminCredentials": {
+        "username": "admin",
+        "password": "admin"
+    },
     "customSections": [],
     "subscribers": [],
     "emailLogs": [],
@@ -908,6 +912,70 @@ class CMSHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_header('Content-Type', 'application/json')
                 self.end_headers()
                 self.wfile.write(json.dumps({"status": "success"}).encode('utf-8'))
+            except Exception as e:
+                self.send_error_response(500, str(e))
+            return
+
+        # 6. Admin Login verification
+        elif self.path == '/api/admin/login':
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            try:
+                req_data = json.loads(post_data.decode('utf-8'))
+                username = req_data.get('username', '').strip()
+                password = req_data.get('password', '').strip()
+                
+                db = load_db()
+                creds = db.get('adminCredentials', {"username": "admin", "password": "admin"})
+                
+                if username == creds.get('username') and password == creds.get('password'):
+                    self.send_response(200)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.wfile.write(json.dumps({"status": "success"}).encode('utf-8'))
+                else:
+                    self.send_error_response(401, "Invalid administrator username or password")
+            except Exception as e:
+                self.send_error_response(500, str(e))
+            return
+
+        # 7. Change Admin Credentials
+        elif self.path == '/api/admin/change-credentials':
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            try:
+                req_data = json.loads(post_data.decode('utf-8'))
+                new_user = req_data.get('username', '').strip()
+                new_pass = req_data.get('password', '').strip()
+                
+                if not new_user or not new_pass:
+                    self.send_error_response(400, "Username and password cannot be blank")
+                    return
+                
+                db = load_db()
+                db['adminCredentials'] = {
+                    "username": new_user,
+                    "password": new_pass
+                }
+                
+                # Log the activity
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                ip = self.client_address[0]
+                if 'activityLogs' not in db:
+                    db['activityLogs'] = []
+                db['activityLogs'].insert(0, {
+                    "ip": ip,
+                    "text": f"Administrator username and password were updated",
+                    "time": timestamp,
+                    "interactive": True
+                })
+                
+                save_db(db)
+                
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps({"status": "success", "message": "Credentials updated successfully"}).encode('utf-8'))
             except Exception as e:
                 self.send_error_response(500, str(e))
             return
