@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: yellow-rose-backend
+    runtime: python
+    buildCommand: echo "No build step required"
+    startCommand: python server.py
+    disk:
+      name: yellow-rose-storage
+      mountPath: /opt/render/project/src/images
+      sizeGB: 1
