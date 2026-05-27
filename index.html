@@ -72,7 +72,32 @@
   <!-- ========== NAVIGATION ========== -->
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
-      <a href="#" class="navbar-logo" id="nav-logo" data-page="home" onclick="navigateTo('home'); return false;">Yellow Rose Cafe</a>
+      <a href="#" class="navbar-logo-container" id="nav-logo" data-page="home" onclick="navigateTo('home'); return false;">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="38" height="38">
+          <defs>
+            <linearGradient id="rose-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffb703" />
+              <stop offset="100%" stop-color="#fb8500" />
+            </linearGradient>
+            <linearGradient id="leaf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2a9d8f" />
+              <stop offset="100%" stop-color="#126e64" />
+            </linearGradient>
+          </defs>
+          <circle cx="24" cy="24" r="22" fill="#795900" opacity="0.06" />
+          <circle cx="24" cy="24" r="21" fill="none" stroke="#795900" stroke-width="1.2" stroke-dasharray="2,2" opacity="0.4" />
+          <path d="M12,28 C15,22 22,23 24,25 C20,29 14,31 12,28 Z" fill="url(#leaf-grad)" />
+          <path d="M36,28 C33,22 26,23 24,25 C28,29 34,31 36,28 Z" fill="url(#leaf-grad)" />
+          <path d="M24,25 L24,38" stroke="#126e64" stroke-width="2.5" stroke-linecap="round" />
+          <path d="M24,9 C15,10 12,18 19,25 C24,25 24,25 24,25 C24,25 24,25 29,25 C36,18 33,10 24,9 Z" fill="url(#rose-grad)" />
+          <path d="M24,12 C18,13 16,19 21,23 C24,23 24,23 24,23 C24,23 24,23 27,23 C32,19 30,13 24,12 Z" fill="#ffdea0" />
+          <circle cx="24" cy="18" r="3.5" fill="#795900" />
+        </svg>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">Yellow Rose</span>
+          <span class="logo-subtitle">C A F E</span>
+        </div>
+      </a>
       <div class="navbar-links">
         <a href="#" data-page="home" class="active" onclick="navigateTo('home'); return false;">Home</a>
         <a href="#" data-page="menu" onclick="navigateTo('menu'); return false;">Menu</a>
@@ -611,7 +636,32 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand-name">Yellow Rose Cafe</div>
+          <div class="footer-brand-logo-container">
+            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="34" height="34" style="filter: brightness(0.9) invert(0.1);">
+              <defs>
+                <linearGradient id="rose-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffb703" />
+                  <stop offset="100%" stop-color="#fb8500" />
+                </linearGradient>
+                <linearGradient id="leaf-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2a9d8f" />
+                  <stop offset="100%" stop-color="#126e64" />
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="24" r="22" fill="#795900" opacity="0.06" />
+              <circle cx="24" cy="24" r="21" fill="none" stroke="#795900" stroke-width="1.2" stroke-dasharray="2,2" opacity="0.4" />
+              <path d="M12,28 C15,22 22,23 24,25 C20,29 14,31 12,28 Z" fill="url(#leaf-grad-footer)" />
+              <path d="M36,28 C33,22 26,23 24,25 C28,29 34,31 36,28 Z" fill="url(#leaf-grad-footer)" />
+              <path d="M24,25 L24,38" stroke="#126e64" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M24,9 C15,10 12,18 19,25 C24,25 24,25 24,25 C24,25 24,25 29,25 C36,18 33,10 24,9 Z" fill="url(#rose-grad-footer)" />
+              <path d="M24,12 C18,13 16,19 21,23 C24,23 24,23 24,23 C24,23 24,23 27,23 C32,19 30,13 24,12 Z" fill="#ffdea0" />
+              <circle cx="24" cy="18" r="3.5" fill="#795900" />
+            </svg>
+            <div class="logo-text-wrapper">
+              <span class="logo-title" style="font-size: 1.3rem;">Yellow Rose</span>
+              <span class="logo-subtitle" style="font-size: 0.65rem;">C A F E</span>
+            </div>
+          </div>
           <p class="footer-brand-desc">A beloved Chicago neighborhood diner serving homemade breakfast and lunch classics since 1954. Pull up a chair — we've been saving a spot for you.</p>
         </div>
         <div class="footer-col">

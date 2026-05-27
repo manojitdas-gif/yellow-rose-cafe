@@ -363,17 +363,57 @@ input, textarea, select {
   margin: 0 auto;
 }
 
-.navbar-logo {
-  font-family: 'Domine', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   cursor: pointer;
-  transition: transform var(--duration-fast) var(--ease-spring);
+  user-select: none;
 }
 
-.navbar-logo:hover {
-  transform: scale(1.02);
+.logo-icon {
+  transition: transform var(--duration-slow) var(--ease-spring);
+  filter: drop-shadow(0 2px 4px rgba(121, 89, 0, 0.15));
+}
+
+.navbar-logo-container:hover .logo-icon,
+.footer-brand-logo-container:hover .logo-icon {
+  transform: scale(1.1) rotate(8deg);
+  filter: drop-shadow(0 4px 8px rgba(251, 133, 0, 0.3));
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo-title {
+  font-family: 'Domine', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, var(--primary) 30%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-subtitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--secondary);
+  letter-spacing: 0.38em;
+  margin-top: 1px;
+}
+
+.footer-brand-logo-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--space-md);
+  user-select: none;
 }
 
 .navbar-links {
