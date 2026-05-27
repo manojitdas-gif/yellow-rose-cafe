@@ -284,11 +284,45 @@ function applySiteSettings() {
 
   // 1. Logo text mapping
   const logoText = settings.logoText || "Yellow Rose Cafe";
-  const navLogo = document.getElementById("nav-logo");
-  if (navLogo) navLogo.textContent = logoText;
+  
+  const updateLogoTextElement = (container) => {
+    if (!container) return;
+    const titleEl = container.querySelector(".logo-title");
+    const subtitleEl = container.querySelector(".logo-subtitle");
+    if (titleEl) {
+      const lowerText = logoText.toLowerCase();
+      if (lowerText.endsWith(" cafe")) {
+        titleEl.textContent = logoText.substring(0, logoText.length - 5);
+        if (subtitleEl) {
+          subtitleEl.textContent = "C A F E";
+          subtitleEl.style.display = "";
+        }
+      } else if (lowerText.endsWith("cafe")) {
+        titleEl.textContent = logoText.substring(0, logoText.length - 4);
+        if (subtitleEl) {
+          subtitleEl.textContent = "C A F E";
+          subtitleEl.style.display = "";
+        }
+      } else {
+        titleEl.textContent = logoText;
+        if (subtitleEl) {
+          subtitleEl.style.display = "none";
+        }
+      }
+    } else {
+      container.textContent = logoText;
+    }
+  };
 
-  const footerLogo = document.querySelector(".footer-brand-name");
-  if (footerLogo) footerLogo.textContent = logoText;
+  const navLogo = document.getElementById("nav-logo");
+  if (navLogo) {
+    updateLogoTextElement(navLogo);
+  }
+
+  const footerLogoContainer = document.querySelector(".footer-brand-logo-container");
+  if (footerLogoContainer) {
+    updateLogoTextElement(footerLogoContainer);
+  }
 
   // 2. Hero Content
   const heroTitle = document.getElementById("hero-title");

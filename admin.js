@@ -1056,7 +1056,37 @@ async function handleSendNewsletter(e) {
 
 function fillSettingsForm() {
   const settings = dbState.siteSettings || {};
-  document.getElementById("set-logo").value = settings.logoText || "Yellow Rose Cafe";
+  const logoText = settings.logoText || "Yellow Rose Cafe";
+  document.getElementById("set-logo").value = logoText;
+
+  // Update admin sidebar logo title and subtitle
+  const sidebarHeader = document.querySelector(".sidebar-header");
+  if (sidebarHeader) {
+    const titleEl = sidebarHeader.querySelector(".logo-title");
+    const subtitleEl = sidebarHeader.querySelector(".logo-subtitle");
+    if (titleEl) {
+      const lowerText = logoText.toLowerCase();
+      if (lowerText.endsWith(" cafe")) {
+        titleEl.textContent = logoText.substring(0, logoText.length - 5);
+        if (subtitleEl) {
+          subtitleEl.textContent = "C A F E";
+          subtitleEl.style.display = "";
+        }
+      } else if (lowerText.endsWith("cafe")) {
+        titleEl.textContent = logoText.substring(0, logoText.length - 4);
+        if (subtitleEl) {
+          subtitleEl.textContent = "C A F E";
+          subtitleEl.style.display = "";
+        }
+      } else {
+        titleEl.textContent = logoText;
+        if (subtitleEl) {
+          subtitleEl.style.display = "none";
+        }
+      }
+    }
+  }
+
   document.getElementById("set-phone").value = settings.phone || "(773) 631-2397";
   document.getElementById("set-address").value = settings.address || "5640 N Elston Ave, Chicago, IL 60646";
   document.getElementById("set-hours").value = settings.hours || "Monday – Sunday: 6:00 AM – 2:00 PM";
